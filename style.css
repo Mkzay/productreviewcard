@@ -16,10 +16,19 @@ body {
     width: 345px;
     background-color: hsl(0, 0%, 100%);
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.left img {
+.left {
     width: 345px;
+    height: 250px;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -35,7 +44,7 @@ body {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 10px;
-    text-indent: -3px;
+    text-indent: -2px;
 }
 
 .right h1 {
@@ -88,4 +97,32 @@ button:hover {
 
 .right img {
     margin-right: 5px;
+}
+
+
+
+
+
+@media screen and (min-width: 900px) {
+    .container {
+        width: 600px;
+        flex-direction: row;
+    }
+
+    .left {
+        width: 900px;
+        height: 430px;
+        background-image: url(images/image-product-desktop.jpg);
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0px;
+    }
+
+    .right h1 {
+        padding: 0 40px 0 0px;
+    }
+
+    .aside {
+        top: -37px;
+        left: 50%;
+    }
 }
